@@ -14,5 +14,5 @@ void check(int* array, int size) {
         }
         i++;
     }
-    printf("Correct\n\n");
+    //printf("Correct\n\n");
 }

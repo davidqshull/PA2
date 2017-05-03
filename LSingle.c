@@ -33,14 +33,8 @@ void quicksort(int* array, int low, int high) {
 }
 
 int main(void) {
-    int size = 10;
-    //int* array = read_array(&size);
-    printf("\nTest LSingle\n");
-    int array[10] = {1000, 23, 724, 278319, 1232, 23, 2342, 8, 109, 500};
-    printf("Input:\t");
-    printArray(array, size);
+    int size;
+    int* array = read_array(&size);
     quicksort(array, 0, size-1);
-    printf("Output:\t");
-    printArray(array, size);
     check(array, size);
 }
