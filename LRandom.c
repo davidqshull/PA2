@@ -1,7 +1,7 @@
 /**
  * CSC 335 - Analysis of Algorithms
  * Programming Assignment 2
- * Jan-Lucas Fitzquadragesimus Ott, Anthony Fitzquadragesimus Pompili, David Quadragesimus Shull
+ * Jan-Lucas Fitzquadragesimus Ott, Anthony Fitzdmitris Pompili, David Quadragesimus Shull
  * May 5, 2017
 */
 
