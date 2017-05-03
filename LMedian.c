@@ -13,29 +13,18 @@
 #include "check.c"
 
 int partition(int* array, int low, int high) {
-
     int pivotIdx = median(low, high, array);
-
     int pivot = array[pivotIdx];
-    int i = low;
-    int j = high-1;
-
     swap(pivotIdx, high, array);
-
-    while(i <= j) {
-        while(array[i] < pivot)
-            i++;
-        while(array[j] > pivot)
-            j--;
-        if(i <= j) {
+    int i = low;
+    for(int j = low; j < high; j++) {
+        if(array[j] <= pivot) {
             swap(i, j, array);
             i++;
-            j--;
         }
     }
-
     swap(i, high, array);
-    return (i);
+    return i;
 }
 
 void quicksort(int* array, int low, int high) {
@@ -50,7 +39,7 @@ int main(void) {
     int size = 10;
     //int* array = read_array(&size);
     printf("\nTest LMedian\n");
-    int array[10] = {1000, 23, 724, 278319, 1232, 86, 2342, 8, 109, 500};
+    int array[10] = {1000, 23, 724, 278319, 1232, 23, 2342, 8, 109, 500};
     printf("Input:\t");
     printArray(array, size);
     quicksort(array, 0, size-1);

@@ -8,34 +8,23 @@
 #include <stdio.h>
 #include "read_array.c"
 #include "random.c"
-#include "printArray.c"
 #include "swap.c"
+#include "printArray.c"
 #include "check.c"
 
 int partition(int* array, int low, int high) {
-
     int pivotIdx = randomInt(low, high);
-
     int pivot = array[pivotIdx];
-    int i = low;
-    int j = high-1;
-
     swap(pivotIdx, high, array);
-
-    while(i <= j) {
-        while(array[i] < pivot)
-            i++;
-        while(array[j] > pivot)
-            j--;
-        if(i <= j) {
+    int i = low;
+    for(int j = low; j < high; j++) {
+        if(array[j] <= pivot) {
             swap(i, j, array);
             i++;
-            j--;
         }
     }
-
     swap(i, high, array);
-    return (i);
+    return i;
 }
 
 void quicksort(int* array, int low, int high) {
