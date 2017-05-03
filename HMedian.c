@@ -50,5 +50,5 @@ int main(void) {
     int size;
     int* array = read_array(&size);
     quicksort(array, 0, size-1);
-    check(array, size);
+    printArray(array, size);
 }
