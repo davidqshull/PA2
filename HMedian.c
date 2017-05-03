@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include "read_array.c"
+#include "median.c"
 
 int main(void) {
     int size;

@@ -9,5 +9,6 @@
 #include "read_array.c"
 
 int main(void) {
-
+    int size;
+    int* array = read_array(&size);
 }

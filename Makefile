@@ -1,10 +1,12 @@
 make:
-	gcc -o quicksort.Hoare.single_pivot HLP.c
-	gcc -o quicksort.Hoare.median_pivot HMP.c
-	gcc -o quicksort.Hoare.random_pivot	HRP.c
-	gcc -o quicksort.Lomuto.single_pivot
-	gcc -o quicksort.Lomuto.median_pivot
-	gcc -o quicksort.Lomuto.random_pivot
+	gcc -o quicksort.Hoare.single_pivot HSingle.c
+	gcc -o quicksort.Hoare.median_pivot HMedian.c
+	gcc -o quicksort.Hoare.random_pivot	HRandom.c
+	gcc -o quicksort.Lomuto.single_pivot LSingle.c
+	gcc -o quicksort.Lomuto.median_pivot LMedian.c
+	gcc -o quicksort.Lomuto.random_pivot LRandom.c
+	gcc -o testing test.c
 
 clean:
 	rm -rf quicksort.*
+	rm testing
