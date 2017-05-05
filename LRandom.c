@@ -10,14 +10,13 @@
 #include "random.c"
 #include "swap.c"
 #include "printArray.c"
-#include "check.c"
 
 int partition(int* array, int low, int high) {
     int pivotIdx = randomInt(low, high);
     int pivot = array[pivotIdx];
     swap(pivotIdx, high, array);
-    int i = low;
-    for(int j = low; j < high; j++) {
+    int j, i = low;
+    for(j = low; j < high; j++) {
         if(array[j] <= pivot) {
             swap(i, j, array);
             i++;

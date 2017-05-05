@@ -10,7 +10,6 @@
 #include "random.c"
 #include "printArray.c"
 #include "swap.c"
-#include "check.c"
 
 int partition(int* array, int low, int high) {
 
